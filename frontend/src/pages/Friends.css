@@ -1,0 +1,155 @@
+.friends-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.requests-section { margin-bottom: 36px; }
+
+.request-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 8px;
+  transition: background var(--transition);
+  box-shadow: var(--shadow);
+}
+.request-row:hover { background: var(--surface-raised); }
+
+.request-info { flex: 1; min-width: 0; }
+.request-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.request-motto { font-size: 0.78rem; color: var(--text-secondary); font-style: italic; margin-top: 2px; }
+.request-email { font-size: 0.78rem; color: var(--text-dim); margin-top: 2px; }
+.request-actions { display: flex; gap: 8px; flex-shrink: 0; align-self: center; }
+
+/* Friend rows */
+.friends-list {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.friend-row {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.friend-row:last-child { border-bottom: none; }
+
+.friend-row-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.friend-row-header:hover { background: var(--surface); }
+
+.friend-row-info { flex: 1; min-width: 0; }
+.friend-row-name { font-size: 0.9rem; font-weight: 600; line-height: 1.3; color: var(--text); }
+.friend-motto {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.friend-status {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.friend-row-meta {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 3px;
+}
+
+.friend-row-stats { display: flex; align-items: center; gap: 12px; padding-top: 2px; flex-shrink: 0; }
+
+.friend-streak-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-muted);
+  border: 1px solid var(--accent-border);
+}
+
+.friend-chevron {
+  color: var(--text-dim);
+  font-size: 0.6rem;
+  transition: transform var(--transition);
+}
+.friend-chevron.open { transform: rotate(180deg); }
+
+/* Friend habits sub-table */
+.friend-habits {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.friend-habits-head {
+  display: grid;
+  grid-template-columns: 1fr 80px 60px;
+  padding: 8px 20px 8px 64px;
+  border-bottom: 1px solid var(--border);
+}
+.fth {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.fth-right { text-align: right; }
+.fth-center { text-align: center; }
+
+.friend-habit-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 60px;
+  align-items: center;
+  padding: 10px 20px 10px 64px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.friend-habit-row:last-child { border-bottom: none; }
+
+.fh-name-cell { display: flex; align-items: center; gap: 10px; }
+.fh-dot { width: 3px; height: 16px; border-radius: 2px; flex-shrink: 0; }
+.fh-name { font-size: 0.85rem; color: var(--text); }
+
+.fh-streak { text-align: right; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); }
+.fh-streak.hot { color: var(--accent); }
+
+.fh-status { text-align: center; }
+.fh-check {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+.fh-check.done { background: var(--success); border-color: var(--success); color: #0F172A; }
+.fh-check.pending { color: transparent; }
+
+.friend-no-habits { padding: 16px 20px 16px 64px; font-size: 0.85rem; color: var(--text-dim); }
